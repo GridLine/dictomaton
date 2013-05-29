@@ -23,6 +23,16 @@
         <name>dictomaton</name>
         <url>scp://hudson/home/gridline/mavenweb/dictomaton</url>
       </site>
+      <repository>
+        <id>gridline-distribution</id>
+        <name>gridline-distribution</name>
+        <url>http://hudson:8081/nexus/content/repositories/releases/</url>
+      </repository>
+      <snapshotRepository>
+        <id>gridline-snapshots</id>
+        <name>gridline-snapshots</name>
+        <url>http://hudson:8081/nexus/content/repositories/snapshots/</url>
+      </snapshotRepository>
     </distributionManagement>
 
     <licenses>
