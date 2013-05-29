@@ -17,6 +17,14 @@
         <tag>HEAD</tag>
     </scm>
 
+    <distributionManagement>
+      <site>
+        <id>dictomaton</id>
+        <name>dictomaton</name>
+        <url>scp://hudson/home/gridline/mavenweb/dictomaton</url>
+      </site>
+    </distributionManagement>
+
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -39,6 +47,13 @@
     </properties>
 
     <build>
+        <extensions>
+          <extension>
+            <groupId>org.apache.maven.wagon</groupId>
+            <artifactId>wagon-ssh</artifactId>
+            <version>2.4</version>
+          </extension>
+        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -60,6 +75,11 @@
                     <groups>${junit.groups}</groups>
                 </configuration>
             </plugin>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-site-plugin</artifactId>
+              <version>3.2</version>
+          </plugin>
         </plugins>
     </build>
 
